@@ -80,7 +80,11 @@ export class HomePage {
     // Menambahkan marker di lokasi yang ditentukan
     const marker = L.marker([-7.740888969687221, 110.49237787019925], { icon: simpleMarkerIcon }).addTo(this.map);
 
-    // Menambahkan pop-up pada marker
-    marker.bindPopup("<b>Candi Prambanan</b><br>Candi Prambanan adalah kompleks candi Hindu terbesar di Indonesia yang telah dibangun sejak masa pemerintahan Kerajaan Mataram Kuno atau sekitar abad ke-9 Masehi").openPopup();
+    // Menambahkan pop-up dengan gambar dan teks pada marker
+    marker.bindPopup(`
+      <b>Candi Prambanan</b><br>
+      Candi Prambanan adalah kompleks candi Hindu terbesar di Indonesia yang telah dibangun sejak masa pemerintahan Kerajaan Mataram Kuno atau sekitar abad ke-9 Masehi.<br>
+      <img src="https://kitakabari.com/wp-content/uploads/2022/01/Candi-Prambanan-Sleman-e1641614754771-2048x1376.jpg" alt="Candi Prambanan" width="200px"/>
+    `).openPopup();
   }
 }
